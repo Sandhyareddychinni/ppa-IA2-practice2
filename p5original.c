@@ -7,23 +7,13 @@ int input()
   return a;
   }
 int find_gcd(int a,int b)
-{
-  int i,t,gcd;
-  if(a>b)
   {
-    t=a;
-    a=b;
-    b=t;
-    }
-  if(b%a == 0)
-  {
-    return a;
-    }
-  for(i=2;i<a/2;i++)
+    int i,gcd=1;
+  for(i=2;i<=a && i<=b;i++)
     {
       if(a%i == 0 && b%i == 0)
       {
-        gcd =a;
+        gcd=i;
         }
       }
   return gcd;
